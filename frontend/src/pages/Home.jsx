@@ -37,6 +37,17 @@ export default function Home() {
         <p className="text-lg text-gray-700 dark:text-gray-300">
           Kickstart your project with a fully featured, production-ready boilerplate.
         </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300">
+          Developed by <span className='text-blue-600'>
+        <a
+          href="https://kshitij-kashyap-portfolio.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          Kshitij Kashyap
+        </a></span>
+        </p>
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
