@@ -1,15 +1,25 @@
-import { useState } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { ThemeProvider } from './context/ThemeContext'
+import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 
-function App() {
+
+export default function App() {
   return (
-    <>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <h1 className="text-4xl font-bold text-blue-600">
-          MERN Stack Template 🚀
-        </h1>
-      </div>
-    </>
+    <ThemeProvider>
+      <Router>
+        <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   )
 }
-
-export default App
